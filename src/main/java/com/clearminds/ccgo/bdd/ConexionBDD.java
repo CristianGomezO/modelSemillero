@@ -16,7 +16,7 @@ public class ConexionBDD {
 		Properties propiedades = new Properties();
 		String valorPropiedad = "";
 		try {
-			propiedades.load(new FileInputStream("C:/Users/USER/Desktop/tallerSemillero/src/main/java/com/clearminds/ccgo/middleware/conexion.properties"));
+			propiedades.load(new FileInputStream("C:/Users/USER/Desktop/modelSemillero/src/main/java/com/clearminds/ccgo/middleware/conexion.properties"));
 			valorPropiedad = propiedades.getProperty(nombrePropiedad);
 			
 		} catch (FileNotFoundException e) {
