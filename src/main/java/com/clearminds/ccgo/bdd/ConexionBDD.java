@@ -1,5 +1,6 @@
 package com.clearminds.ccgo.bdd;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -15,6 +16,8 @@ public class ConexionBDD {
 	public static String leerPropiedad(String nombrePropiedad){
 		Properties propiedades = new Properties();
 		String valorPropiedad = "";
+		File f=new File("conexion.properties");
+		System.out.println("ruta:"+f.getAbsoluteFile());
 		try {
 			propiedades.load(new FileInputStream("C:/Users/USER/Desktop/modelSemillero/src/main/java/com/clearminds/ccgo/middleware/conexion.properties"));
 			valorPropiedad = propiedades.getProperty(nombrePropiedad);
